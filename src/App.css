@@ -162,3 +162,64 @@ p.author a {
   font-weight: 700;
   color: #000;
 }
+
+@media (max-width: 768px) {
+  header ul li a {
+    font-size: 14px; /* Reduce font size for nav links */
+  }
+
+  header ul {
+    padding: 0 10px; /* Adjust padding for header */
+  }
+
+  header ul li {
+    margin: 0 5px; /* Adjust margin for list items */
+  }
+
+  header ul li:nth-child(3), /* Hide "Hoy" */
+  header ul li:nth-child(4) { /* Hide "Crear" */
+    display: none;
+  }
+
+  header ul li:nth-child(5) { /* Search input container */
+    flex-grow: 15; /* Adjust flex-grow */
+  }
+
+  header ul li input {
+    padding: 15px 20px 15px 30px; /* Adjust padding for search input */
+  }
+}
+
+@media (max-width: 480px) {
+  header ul li a {
+    font-size: 12px; /* Further reduce font size for nav links */
+  }
+
+  header ul {
+    padding: 0 5px; /* Further adjust padding for header */
+  }
+
+  header ul li {
+    margin: 0 2px; /* Further adjust margin for list items */
+  }
+
+  header ul li:first-child, /* Logo */
+  header ul li:last-child { /* User element */
+    flex-grow: 1; /* Ensure they take up minimal space */
+  }
+
+  header ul li:nth-child(5) { /* Search input container */
+    flex-grow: 10; /* Further adjust flex-grow */
+  }
+
+  header ul li input {
+    padding: 12px 15px 12px 25px; /* Further adjust padding for search input */
+    font-size: 12px; /* Adjust font size for search input */
+  }
+
+  header ul li:nth-child(5):before { /* Search icon */
+    width: 14px;
+    height: 14px;
+    left: 8px;
+  }
+}
